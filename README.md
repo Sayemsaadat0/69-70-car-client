@@ -1,2 +1,7 @@
-# 69-70-car-client
-# cannot solving an error , its not deleting from the ui and not showingg confirmed imediately 
+# 69-70-71-car-client
+# 69
+firebase and desigin 
+# 70
+database 
+# 71
+jwt 

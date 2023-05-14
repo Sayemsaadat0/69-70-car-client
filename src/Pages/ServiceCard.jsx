@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/Fi';
 
 const ServiceCard = ({service}) => {
-    console.log(service)
+
     const {_id, img ,price , title , description} = service
     return (
         <div className='mx-auto'>

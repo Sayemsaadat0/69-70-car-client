@@ -6,7 +6,9 @@ const Navbar = () => {
     const {user, logOut} = useContext(AuthConext)
     const handleLogOut = () =>{
         logOut()
-        .then(()=>{})
+        .then(()=>{
+            localStorage.removeItem('access-token-car')
+        })
         .catch(error => console.log(error))
     }
 
@@ -26,6 +28,7 @@ const Navbar = () => {
                      <button
                     onClick={handleLogOut}
                     >logout</button>
+                   
                     <Link   
                     to='/bookings'
                     className='mx-2 px-2 bg-slate-300' >my bookings</Link>
