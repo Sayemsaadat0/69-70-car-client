@@ -29,7 +29,7 @@ const Bookings = () => {
                 console.log(data)
                 if(data.deletedCount > 0){
                     alert('fuckoff')
-                    const remaiining = bookings.filter(b =>b._d !== id )
+                    const remaiining = bookings.filter(b =>b._id !== id )
                     setBookings(remaiining)
                 }
             })
@@ -48,7 +48,7 @@ const Bookings = () => {
             },
             body: JSON.stringify({status : 'confirm'})
         })
-        .then(res => res.json)
+        .then(res => res.json())
         .then(data =>{
             console.log(data)
             if (data.modifiedCount > 0){
@@ -57,7 +57,6 @@ const Bookings = () => {
                 updated.status = 'confirm'
                 const newbookings =  [updated, ...remaining];
 
-                
                 setBookings(newbookings)
             }
         })
